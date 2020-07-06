@@ -49,15 +49,10 @@ namespace DB4_Room_Calculator
 
         private void ShowStatistics(double area, double perimeter, double volume)
         {
-            //This is an outdated method of printing the statistics using number formatting.
-            //Console.WriteLine($"\nArea is: {string.Format("{0:0,0.00}", area)}");
-            //Console.WriteLine($"Perimeter is: {string.Format("{0:0,0.00}", perimeter)}");
-            //Console.WriteLine($"Volume is: {string.Format("{0:0,0.00}", volume)}\n");
-
-            //this will output the values in proper imperial format.
-            Console.WriteLine($"\nArea is: {ConvertToImperial(area)}");
-            Console.WriteLine($"Perimeter is: {ConvertToImperial(perimeter)}");
-            Console.WriteLine($"Volume is: {ConvertToImperial(volume)}\n");
+            //This will output the values in square footage.
+            Console.WriteLine($"\nThe area is {string.Format("{0:#,#.##}", area)} square feet.");
+            Console.WriteLine($"The perimeter is {string.Format("{0:#,#.##}", perimeter)} square feet.");
+            Console.WriteLine($"The volume is: {string.Format("{0:#,#.##}", volume)} cubic feet.\n");
 
             //based on room size clasify the room.
             if (area < SMALL_ROOM)
@@ -72,19 +67,6 @@ namespace DB4_Room_Calculator
             {
                 Console.WriteLine("This is a large sized room.\n");
             }
-        }
-
-        private string ConvertToImperial(double size)
-        {
-            double feet, inches;
-            
-            //the feet is straight converted from the whole number
-            feet = Math.Floor(size);
-
-            //the inches are the decimal portion multiplied by 12, this is rounded due to precision
-            inches = Math.Round((size % 1) * 12, ROUNDING_DIGITS);
-            
-            return $"{feet}' {inches}\"";
         }
 
         //returns area of a rectangle
