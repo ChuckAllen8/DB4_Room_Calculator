@@ -1,0 +1,13 @@
+C:\devbuild4\DB4_Room_Calculator\bin\Debug\netcoreapp3.1\DB4_Room_Calculator.exe
+C:\devbuild4\DB4_Room_Calculator\bin\Debug\netcoreapp3.1\DB4_Room_Calculator.deps.json
+C:\devbuild4\DB4_Room_Calculator\bin\Debug\netcoreapp3.1\DB4_Room_Calculator.runtimeconfig.json
+C:\devbuild4\DB4_Room_Calculator\bin\Debug\netcoreapp3.1\DB4_Room_Calculator.runtimeconfig.dev.json
+C:\devbuild4\DB4_Room_Calculator\bin\Debug\netcoreapp3.1\DB4_Room_Calculator.dll
+C:\devbuild4\DB4_Room_Calculator\bin\Debug\netcoreapp3.1\DB4_Room_Calculator.pdb
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.csprojAssemblyReference.cache
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.AssemblyInfoInputs.cache
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.AssemblyInfo.cs
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.csproj.CoreCompileInputs.cache
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.dll
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.pdb
+C:\devbuild4\DB4_Room_Calculator\obj\Debug\netcoreapp3.1\DB4_Room_Calculator.genruntimeconfig.cache
