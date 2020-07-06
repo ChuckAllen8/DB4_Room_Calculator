@@ -50,8 +50,8 @@ namespace DB4_Room_Calculator
         private void ShowStatistics(double area, double perimeter, double volume)
         {
             //This will output the values in square footage.
-            Console.WriteLine($"\nThe area is {string.Format("{0:#,#.##}", area)} square feet.");
-            Console.WriteLine($"The perimeter is {string.Format("{0:#,#.##}", perimeter)} square feet.");
+            Console.WriteLine($"\nThe perimeter is {string.Format("{0:#,#.##}", perimeter)} feet.");
+            Console.WriteLine($"The area is {string.Format("{0:#,#.##}", area)} square feet.");
             Console.WriteLine($"The volume is: {string.Format("{0:#,#.##}", volume)} cubic feet.\n");
 
             //based on room size clasify the room.
