@@ -1,6 +1,6 @@
 ﻿/*
  * Code made by Chuck Allen for submission as a lab.
- * This asks the user to give the height, length, and width or a room.
+ * This asks the user to give the height, length, and width of a room.
  * It then calculates some statistics based on that information.
  * 
  */
