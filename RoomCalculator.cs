@@ -15,12 +15,16 @@ namespace DB4_Room_Calculator
 
         private const int SMALL_ROOM = 250;
         private const int MEDIUM_ROOM = 650;
+        private const int ROUNDING_DIGITS = 1;
+        private const int WINDOW_WIDTH = 50;
+        private const int WINDOW_HEIGHT = 25;
 
         public void Start()
         {
             bool moreRooms = true;
             double width, length, height; //user entered variables
             double area, perimeter, volume; //calculated variables
+            Console.SetWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 
             Console.WriteLine("Welcome to the Room Detail Generator!\n");
 
@@ -45,9 +49,15 @@ namespace DB4_Room_Calculator
 
         private void ShowStatistics(double area, double perimeter, double volume)
         {
-            Console.WriteLine($"\nArea is: {string.Format("{0:0,0.00}", area)}");
-            Console.WriteLine($"Perimeter is: {string.Format("{0:0,0.00}", perimeter)}");
-            Console.WriteLine($"Volume is: {string.Format("{0:0,0.00}", volume)}\n");
+            //This is an outdated method of printing the statistics using number formatting.
+            //Console.WriteLine($"\nArea is: {string.Format("{0:0,0.00}", area)}");
+            //Console.WriteLine($"Perimeter is: {string.Format("{0:0,0.00}", perimeter)}");
+            //Console.WriteLine($"Volume is: {string.Format("{0:0,0.00}", volume)}\n");
+
+            //this will output the values in proper imperial format.
+            Console.WriteLine($"\nArea is: {ConvertToImperial(area)}");
+            Console.WriteLine($"Perimeter is: {ConvertToImperial(perimeter)}");
+            Console.WriteLine($"Volume is: {ConvertToImperial(volume)}\n");
 
             //based on room size clasify the room.
             if (area < SMALL_ROOM)
@@ -64,16 +74,32 @@ namespace DB4_Room_Calculator
             }
         }
 
+        private string ConvertToImperial(double size)
+        {
+            double feet, inches;
+            
+            //the feet is straight converted from the whole number
+            feet = Math.Floor(size);
+
+            //the inches are the decimal portion multiplied by 12, this is rounded due to precision
+            inches = Math.Round((size % 1) * 12, ROUNDING_DIGITS);
+            
+            return $"{feet}' {inches}\"";
+        }
+
+        //returns area of a rectangle
         private double GetArea(double width, double length)
         {
             return (width * length);
         }
 
+        //returns the perimeter of a rectangle
         private double GetPerimeter(double width, double length)
         {
             return ((2*width) + (2*length));
         }
 
+        //returns the volume of a rectangular prism
         private double GetVolume(double width, double length, double height)
         {
             return (GetArea(width, length) * height);
@@ -99,7 +125,7 @@ namespace DB4_Room_Calculator
             bool validEntry = false;
             string input = "";
 
-            //while the input is not valid try and try again.
+            //while the input is not valid, keep trying to get a valid input.
             while (!validEntry)
             {
                 Console.Write(prompt); //provide user prompt
