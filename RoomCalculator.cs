@@ -55,7 +55,7 @@ namespace DB4_Room_Calculator
             Console.WriteLine($"The volume is: {string.Format(NUMBER_FORMAT, volume)} cubic feet.\n");
 
             //based on room size clasify the room.
-            if (area < SMALL_ROOM)
+            if (area <= SMALL_ROOM)
             {
                 Console.WriteLine("This is a small sized room.\n");
             }
