@@ -15,7 +15,6 @@ namespace DB4_Room_Calculator
 
         private const int SMALL_ROOM = 250;
         private const int MEDIUM_ROOM = 650;
-        private const int ROUNDING_DIGITS = 1;
         private const int WINDOW_WIDTH = 50;
         private const int WINDOW_HEIGHT = 25;
 
