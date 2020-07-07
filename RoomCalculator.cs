@@ -17,6 +17,7 @@ namespace DB4_Room_Calculator
         private const int MEDIUM_ROOM = 650;
         private const int WINDOW_WIDTH = 50;
         private const int WINDOW_HEIGHT = 25;
+        private const string NUMBER_FORMAT = "{0:#,#.##}";
 
         public void Start()
         {
@@ -49,9 +50,9 @@ namespace DB4_Room_Calculator
         private void ShowStatistics(double area, double perimeter, double volume)
         {
             //This will output the values in square footage.
-            Console.WriteLine($"\nThe perimeter is {string.Format("{0:#,#.##}", perimeter)} feet.");
-            Console.WriteLine($"The area is {string.Format("{0:#,#.##}", area)} square feet.");
-            Console.WriteLine($"The volume is: {string.Format("{0:#,#.##}", volume)} cubic feet.\n");
+            Console.WriteLine($"\nThe perimeter is {string.Format(NUMBER_FORMAT, perimeter)} feet.");
+            Console.WriteLine($"The area is {string.Format(NUMBER_FORMAT, area)} square feet.");
+            Console.WriteLine($"The volume is: {string.Format(NUMBER_FORMAT, volume)} cubic feet.\n");
 
             //based on room size clasify the room.
             if (area < SMALL_ROOM)
